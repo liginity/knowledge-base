@@ -35,5 +35,8 @@ plugins:
           build: true
 
 
-# nav:
-#   - '软件':
+nav:
+  - 'Home':
+    - index.md
+  - 'Software':
+    - software/qemu.md
