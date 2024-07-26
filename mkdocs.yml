@@ -37,6 +37,7 @@ plugins:
 
 nav:
   - 'Home':
-    - index.md
+    - 'index.md'
   - 'Software':
-    - software/qemu.md
+    - 'software/index.md'
+    - 'software/qemu.md'
