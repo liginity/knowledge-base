@@ -33,6 +33,8 @@ plugins:
           default: true
           name: 中文
           build: true
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 markdown_extensions:
   - pymdownx.highlight:
