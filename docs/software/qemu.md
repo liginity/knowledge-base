@@ -21,7 +21,7 @@ sudo apt-get install qemu-system-x86 ovmf
 ``` bash
 MACHINE_NAME="one-vm"
 # create an image file, format is qcow2.
-qemu-img create -f qcow2 ${MACHINE_NAME}.cow 40G
+qemu-img create -f qcow2 "${MACHINE_NAME}.cow" 40G
 # copy the OVMF VARS file for UEFI usage (it stores UEFI variables).
 # this file is from package ovmf, debian.
 cp "/usr/share/OVMF/OVMF_VARS_4M.ms.fd" ./
@@ -32,13 +32,18 @@ cp "/usr/share/OVMF/OVMF_VARS_4M.ms.fd" ./
 ``` bash
 qemu-system-x86_64 \
     -machine q35,smm=on \
-    -drive file=${MACHINE_NAME}.cow,format=qcow2 \
+    -drive file="${MACHINE_NAME}.cow",format=qcow2 \
     -global driver=cfi.pflash01,property=secure,value=on \
     -drive if=pflash,format=raw,unit=0,file=/usr/share/OVMF/OVMF_CODE_4M.ms.fd,readonly=on \
     -drive if=pflash,format=raw,unit=1,file=OVMF_VARS_4M.ms.fd \
     -cdrom debian-12.1.0-amd64-DVD-1.iso \
     -m 2G \
+    -nic none \
     -nographic -serial mon:stdio -nodefaults
 ```
 
 这里的 `-nographic -serial mon:stdio -nodefaults` 是关键的 qemu 选项。
+
+其它选项：
+
+- `nic none`：这个选项可以禁用虚拟机的网络，避免在系统安装过程中从软件源下载和安装更新（这可能比较慢）。
