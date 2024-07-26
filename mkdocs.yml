@@ -19,6 +19,19 @@ theme:
     # - navigation.prune
     - navigation.indexes
 
+plugins:
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: false
+          name: English
+          build: true
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+
 
 # nav:
 #   - '软件':
