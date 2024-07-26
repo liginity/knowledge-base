@@ -1,0 +1,24 @@
+site_name: Liginity's Knowledge Base
+site_description: Liginity's Knowledge Base. Liginity 的知识库。
+use_directory_urls: true
+copyright: Except when otherwise noted, content on this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0</a>.
+
+docs_dir: 'docs'
+
+theme:
+  name: material
+  language: zh
+  font: false
+  palette:
+    primary: blue
+  features:
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    # - navigation.expand
+    # - navigation.prune
+    - navigation.indexes
+
+
+# nav:
+#   - '软件':
