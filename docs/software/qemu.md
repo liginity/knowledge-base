@@ -29,6 +29,8 @@ cp "/usr/share/OVMF/OVMF_VARS_4M.ms.fd" ./
 
 ### 在终端内启动安装镜像
 
+这一步的 qemu 命令会在终端中启动 `.iso` 中的系统，进入 grub 界面。
+
 ``` bash
 qemu-system-x86_64 \
     -machine q35,smm=on \
@@ -47,3 +49,31 @@ qemu-system-x86_64 \
 其它选项：
 
 - `nic none`：这个选项可以禁用虚拟机的网络，避免在系统安装过程中从软件源下载和安装更新（这可能比较慢）。
+
+### 在 grub 界面中给内核添加启动参数
+
+因为在 qemu 命令行中选择了 serial 设备作为虚拟机系统的显示界面，所以需要给内核添加 `console=ttyS0` 参数才可以让系统使用 serial 设备作为输入输出。
+
+这里简要描述添加内核参数的步骤。
+
+1. 在 grub 显示的菜单中，按 `E` 按键，进入编辑模式，编辑当前的菜单选项。（按方向键移动）
+2. 在有 `linux` 的一行中，在 `vmlinuz` 后添加 `console=ttyS0` 参数。
+3. 按 `Ctrl-X` 使用修改后的菜单选项启动系统。
+
+例子：下面是修改 `debian-12.1.0-amd64-DVD-1.iso` 的效果。
+grub 的 `Install` 菜单选项修改前：
+```
+setparams 'Install'
+
+    set background_color=black
+    linux    /install.amd/vmlinuz vga=788 --- quiet
+    initrd   /install.amd/initrd.gz
+```
+删掉 `vga=788` 参数，添加 `console=ttyS0` 参数，如下：
+```
+setparams 'Install'
+
+    set background_color=black
+    linux    /install.amd/vmlinuz console=ttyS0 --- quiet
+    initrd   /install.amd/initrd.gz
+```
