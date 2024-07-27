@@ -60,8 +60,8 @@ qemu-system-x86_64 \
 2. 在有 `linux` 的一行中，在 `vmlinuz` 后添加 `console=ttyS0` 参数。
 3. 按 `Ctrl-X` 使用修改后的菜单选项启动系统。
 
-例子：下面是修改 `debian-12.1.0-amd64-DVD-1.iso` 的效果。
-grub 的 `Install` 菜单选项修改前：
+例子：下面是修改 `debian-12.1.0-amd64-DVD-1.iso` 的 grub 菜单选项的效果。
+grub 的 `Install` 菜单选项内容修改前：
 ```
 setparams 'Install'
 
