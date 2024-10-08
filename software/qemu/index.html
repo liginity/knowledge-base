@@ -599,8 +599,11 @@
 <h2 id="qemu_1">使用 qemu 在终端里安装和运行虚拟机</h2>
 <p>通过 ssh 连接到没有 GUI 的服务器时，需要在终端里安装和运行 qemu 虚拟机。</p>
 <p>在虚拟机使用 UEFI 固件和使用 BIOS 固件这两种情况下，qemu 启动它们的情况会有不同，这影响需要使用的 qemu 参数。</p>
-<p>下面描述使用 UEFI 固件的情况。</p>
-<p>这是在 debian 12 物理机上执行的操作。</p>
+<p>下面的描述基于这些条件：</p>
+<ul>
+<li>虚拟机使用 UEFI 固件的情况。</li>
+<li>这是在 debian 12 物理机上执行的操作。</li>
+</ul>
 <h3 id="_1">安装软件包</h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>qemu-system-x86<span class="w"> </span>ovmf
 </span></code></pre></div>
@@ -625,10 +628,10 @@
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span>-nic<span class="w"> </span>none<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span>-nographic<span class="w"> </span>-serial<span class="w"> </span>mon:stdio<span class="w"> </span>-nodefaults
 </span></code></pre></div>
-<p>这里的 <code>-nographic -serial mon:stdio -nodefaults</code> 是关键的 qemu 选项。</p>
+<p>这里的 <code>-nographic -serial mon:stdio -nodefaults</code> 是关键的 qemu 选项，它们保证虚拟机能在终端里启动和显示文字信息，而不需要使用图形界面。</p>
 <p>其它选项：</p>
 <ul>
-<li><code>nic none</code>：这个选项可以禁用虚拟机的网络，避免在系统安装过程中从软件源下载和安装更新（这可能比较慢）。</li>
+<li><code>-nic none</code>：这个选项可以禁用虚拟机的网络，避免在系统安装过程中从软件源下载和安装更新（这可能比较慢）。</li>
 </ul>
 <h3 id="grub">在 grub 界面中给内核添加启动参数</h3>
 <p>因为在 qemu 命令行中选择了 serial 设备作为虚拟机系统的显示界面，所以需要给内核添加 <code>console=ttyS0</code> 参数才可以让系统使用 serial 设备作为输入输出。</p>
@@ -638,8 +641,8 @@
 <li>在有 <code>linux</code> 的一行中，在 <code>vmlinuz</code> 后添加 <code>console=ttyS0</code> 参数。</li>
 <li>按 <code>Ctrl-X</code> 使用修改后的菜单选项启动系统。</li>
 </ol>
-<p>例子：下面是修改 <code>debian-12.1.0-amd64-DVD-1.iso</code> 的效果。
-grub 的 <code>Install</code> 菜单选项修改前：
+<p>例子：下面是修改 <code>debian-12.1.0-amd64-DVD-1.iso</code> 的 grub 菜单选项的效果。
+grub 的 <code>Install</code> 菜单选项内容修改前：
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>setparams &#39;Install&#39;
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    set background_color=black
@@ -675,7 +678,7 @@ grub 的 <code>Install</code> 菜单选项修改前：
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年7月27日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月8日</span>
   </span>
 
     

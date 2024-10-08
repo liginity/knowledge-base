@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>None./</loc>
-        <lastmod>2024-07-27</lastmod>
+        <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="None"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
     </url>
     <url>
         <loc>Nonesoftware/</loc>
-        <lastmod>2024-07-27</lastmod>
+        <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/"/>
     </url>
     <url>
         <loc>Nonesoftware/qemu/</loc>
-        <lastmod>2024-07-27</lastmod>
+        <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/"/>
     </url>
     <url>
         <loc>Noneen/</loc>
-        <lastmod>2024-07-27</lastmod>
+        <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="None"/>
     </url>
     <url>
         <loc>Noneen/software/</loc>
-        <lastmod>2024-07-27</lastmod>
+        <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/"/>
     </url>
     <url>
         <loc>Noneen/software/qemu/</loc>
-        <lastmod>2024-07-27</lastmod>
+        <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/"/>
