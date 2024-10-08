@@ -51,4 +51,6 @@ nav:
     - 'index.md'
   - 'Software':
     - 'software/index.md'
-    - 'software/qemu.md'
+    - 'QEMU':
+      - 'software/qemu.md'
+      - '直通 USB 设备': 'software/qemu-passthrough-usb.md'
