@@ -6,9 +6,10 @@
 
 在虚拟机使用 UEFI 固件和使用 BIOS 固件这两种情况下，qemu 启动它们的情况会有不同，这影响需要使用的 qemu 参数。
 
-下面描述使用 UEFI 固件的情况。
+下面的描述基于这些条件：
 
-这是在 debian 12 物理机上执行的操作。
+- 虚拟机使用 UEFI 固件的情况。
+- 这是在 debian 12 物理机上执行的操作。
 
 ### 安装软件包
 
@@ -44,7 +45,7 @@ qemu-system-x86_64 \
     -nographic -serial mon:stdio -nodefaults
 ```
 
-这里的 `-nographic -serial mon:stdio -nodefaults` 是关键的 qemu 选项。
+这里的 `-nographic -serial mon:stdio -nodefaults` 是关键的 qemu 选项，它们保证虚拟机能在终端里启动和显示文字信息，而不需要使用图形界面。
 
 其它选项：
 
