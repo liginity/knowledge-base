@@ -52,5 +52,5 @@ nav:
   - 'Software':
     - 'software/index.md'
     - 'QEMU':
-      - 'software/qemu.md'
+      - '教程：在终端中启动 .iso 并安装虚拟机系统': 'software/qemu.md'
       - '直通 USB 设备': 'software/qemu-passthrough-usb.md'
