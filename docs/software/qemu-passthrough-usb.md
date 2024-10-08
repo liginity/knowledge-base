@@ -1,17 +1,17 @@
 # 给 qemu 虚拟机直通 usb 设备
 
-给虚拟机直通宿主机的 usb 设备，可以让虚拟机直接访问 U 盘等物理设备。
+给 qemu 虚拟机直通宿主机的 usb 设备，可以让虚拟机直接访问 U 盘、摄像头等物理设备。
 
 下面的步骤描述了给虚拟机直通一个 U 盘的过程。
 
-1. 获得访问 usb 设备的权限
+1. 获得 usb 设备的访问权限
     1. 把 usb 设备的所有者设置为当前用户
     2. 用 root 权限运行 qemu
 2. 设置合适的 qemu 参数并启动虚拟机
 
 对于步骤 1，下面选择第一种方法：找到 usb 设备的路径，并把文件的所有者设置为当前用户。
 
-## 获得访问 usb 设备的权限
+## 获得 usb 设备的访问权限
 
 ### 找到 U 盘的设备路径
 
@@ -25,9 +25,10 @@ Bus 001 Device 004: ID 17ef:608d Lenovo Optical Mouse
 Bus 001 Device 005: ID 0930:6544 Toshiba Corp. TransMemory-Mini XXX 2.0 Stick
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
-由此可知，U 盘在 bus 001，device 005 的位置。
-可以在 `/dev/bus/usb/` 目录中找到这个设备，就是 `/dev/bus/usb/001/005`。通过 `udevadm info /dev/bus/usb/001/005` 可以确认这个路径指代的设备是这个 U 盘。
-另外，在 ID `0930:6544` 中，`0930` 是 U 盘的 vendor id，`6544` 是 product id。
+
+- 由此可知，U 盘在 bus 001，device 005 的位置。
+- 可以在 `/dev/bus/usb/` 目录中找到这个设备，就是 `/dev/bus/usb/001/005`。通过 `udevadm info /dev/bus/usb/001/005` 可以确认这个路径指代的设备是这个 U 盘。
+- 在 ID `0930:6544` 中，`0930` 是 U 盘的 vendor id，`6544` 是 product id。
 
 ### 设置 U 盘设备的所有者
 
@@ -41,6 +42,7 @@ sudo chown userAAA /dev/bus/usb/001/005
 ```
 -usb -device usb-host,vendorid=0x0930,productid=0x6544
 ```
+
 - `-usb`：为虚拟机开启 USB 模拟功能。
 - `vendorid=0x0930,productid=0x6544`：上面找到了 U 盘的 vendor id 和 product id，依次填入。
 
