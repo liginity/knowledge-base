@@ -11,23 +11,23 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../tutorial-boot-iso-and-install/">
       
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>QEMU - Liginity's Knowledge Base</title>
+        <title>直通 USB 设备 - Liginity's Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -40,7 +40,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#qemu" class="md-skip">
+        <a href="#qemu-usb" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../" title="Liginity&#39;s Knowledge Base" class="md-header__button md-logo" aria-label="Liginity's Knowledge Base" data-md-component="logo">
+    <a href="../../../" title="Liginity&#39;s Knowledge Base" class="md-header__button md-logo" aria-label="Liginity's Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              QEMU
+              直通 USB 设备
             
           </span>
         </div>
@@ -125,7 +125,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../software/qemu/" hreflang="zh" class="md-select__link">
+            <a href="../../../../software/qemu/passthrough-usb/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
@@ -195,7 +195,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -217,7 +217,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -252,7 +252,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../" title="Liginity&#39;s Knowledge Base" class="md-nav__button md-logo" aria-label="Liginity's Knowledge Base" data-md-component="logo">
+    <a href="../../../" title="Liginity&#39;s Knowledge Base" class="md-nav__button md-logo" aria-label="Liginity's Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -293,7 +293,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -358,7 +358,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -392,6 +392,78 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    QEMU
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            QEMU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-boot-iso-and-install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    教程：在终端中启动 .iso 并安装虚拟机系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -404,7 +476,7 @@
           
   
   <span class="md-ellipsis">
-    QEMU
+    直通 USB 设备
   </span>
   
 
@@ -415,7 +487,7 @@
         
   
   <span class="md-ellipsis">
-    QEMU
+    直通 USB 设备
   </span>
   
 
@@ -437,46 +509,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qemu_1" class="md-nav__link">
+  <a href="#usb" class="md-nav__link">
     <span class="md-ellipsis">
-      使用 qemu 在终端里安装和运行虚拟机
+      获得 usb 设备的访问权限
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="使用 qemu 在终端里安装和运行虚拟机">
+    <nav class="md-nav" aria-label="获得 usb 设备的访问权限">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    <span class="md-ellipsis">
+      找到 U 盘的设备路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置 U 盘设备的所有者
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qemu" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置 qemu 参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      安装软件包
+      更多信息
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="更多信息">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#devsda-usb" class="md-nav__link">
     <span class="md-ellipsis">
-      准备虚拟机文件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      在终端内启动安装镜像
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      在 grub 界面中给内核添加启动参数
+      探索块设备 /dev/sda 和 usb 设备的关系
     </span>
   </a>
   
@@ -490,6 +577,14 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -530,46 +625,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qemu_1" class="md-nav__link">
+  <a href="#usb" class="md-nav__link">
     <span class="md-ellipsis">
-      使用 qemu 在终端里安装和运行虚拟机
+      获得 usb 设备的访问权限
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="使用 qemu 在终端里安装和运行虚拟机">
+    <nav class="md-nav" aria-label="获得 usb 设备的访问权限">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    <span class="md-ellipsis">
+      找到 U 盘的设备路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置 U 盘设备的所有者
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qemu" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置 qemu 参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      安装软件包
+      更多信息
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="更多信息">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#devsda-usb" class="md-nav__link">
     <span class="md-ellipsis">
-      准备虚拟机文件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      在终端内启动安装镜像
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      在 grub 界面中给内核添加启动参数
+      探索块设备 /dev/sda 和 usb 设备的关系
     </span>
   </a>
   
@@ -595,66 +705,82 @@
                   
 
 
-<h1 id="qemu">QEMU</h1>
-<h2 id="qemu_1">使用 qemu 在终端里安装和运行虚拟机</h2>
-<p>通过 ssh 连接到没有 GUI 的服务器时，需要在终端里安装和运行 qemu 虚拟机。</p>
-<p>在虚拟机使用 UEFI 固件和使用 BIOS 固件这两种情况下，qemu 启动它们的情况会有不同，这影响需要使用的 qemu 参数。</p>
-<p>下面的描述基于这些条件：</p>
-<ul>
-<li>虚拟机使用 UEFI 固件的情况。</li>
-<li>这是在 debian 12 物理机上执行的操作。</li>
-</ul>
-<h3 id="_1">安装软件包</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>qemu-system-x86<span class="w"> </span>ovmf
-</span></code></pre></div>
-<h3 id="_2">准备虚拟机文件</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">MACHINE_NAME</span><span class="o">=</span><span class="s2">&quot;one-vm&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># create an image file, format is qcow2.</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>qemu-img<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>qcow2<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MACHINE_NAME</span><span class="si">}</span><span class="s2">.cow&quot;</span><span class="w"> </span>40G
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># copy the OVMF VARS file for UEFI usage (it stores UEFI variables).</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># this file is from package ovmf, debian.</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>cp<span class="w"> </span><span class="s2">&quot;/usr/share/OVMF/OVMF_VARS_4M.ms.fd&quot;</span><span class="w"> </span>./
-</span></code></pre></div>
-<h3 id="_3">在终端内启动安装镜像</h3>
-<p>这一步的 qemu 命令会在终端中启动 <code>.iso</code> 中的系统，进入 grub 界面。</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>qemu-system-x86_64<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>-machine<span class="w"> </span>q35,smm<span class="o">=</span>on<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>-drive<span class="w"> </span><span class="nv">file</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MACHINE_NAME</span><span class="si">}</span><span class="s2">.cow&quot;</span>,format<span class="o">=</span>qcow2<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span>-global<span class="w"> </span><span class="nv">driver</span><span class="o">=</span>cfi.pflash01,property<span class="o">=</span>secure,value<span class="o">=</span>on<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span>-drive<span class="w"> </span><span class="k">if</span><span class="o">=</span>pflash,format<span class="o">=</span>raw,unit<span class="o">=</span><span class="m">0</span>,file<span class="o">=</span>/usr/share/OVMF/OVMF_CODE_4M.ms.fd,readonly<span class="o">=</span>on<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span>-drive<span class="w"> </span><span class="k">if</span><span class="o">=</span>pflash,format<span class="o">=</span>raw,unit<span class="o">=</span><span class="m">1</span>,file<span class="o">=</span>OVMF_VARS_4M.ms.fd<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span>-cdrom<span class="w"> </span>debian-12.1.0-amd64-DVD-1.iso<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span>-m<span class="w"> </span>2G<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span>-nic<span class="w"> </span>none<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span>-nographic<span class="w"> </span>-serial<span class="w"> </span>mon:stdio<span class="w"> </span>-nodefaults
-</span></code></pre></div>
-<p>这里的 <code>-nographic -serial mon:stdio -nodefaults</code> 是关键的 qemu 选项，它们保证虚拟机能在终端里启动和显示文字信息，而不需要使用图形界面。</p>
-<p>其它选项：</p>
-<ul>
-<li><code>-nic none</code>：这个选项可以禁用虚拟机的网络，避免在系统安装过程中从软件源下载和安装更新（这可能比较慢）。</li>
-</ul>
-<h3 id="grub">在 grub 界面中给内核添加启动参数</h3>
-<p>因为在 qemu 命令行中选择了 serial 设备作为虚拟机系统的显示界面，所以需要给内核添加 <code>console=ttyS0</code> 参数才可以让系统使用 serial 设备作为输入输出。</p>
-<p>这里简要描述添加内核参数的步骤。</p>
+<h1 id="qemu-usb">给 qemu 虚拟机直通 usb 设备</h1>
+<p>给 qemu 虚拟机直通宿主机的 usb 设备，可以让虚拟机直接访问 U 盘、摄像头等物理设备。</p>
+<p>下面的步骤描述了给虚拟机直通一个 U 盘的过程。</p>
 <ol>
-<li>在 grub 显示的菜单中，按 <code>E</code> 按键，进入编辑模式，编辑当前的菜单选项。（按方向键移动）</li>
-<li>在有 <code>linux</code> 的一行中，在 <code>vmlinuz</code> 后添加 <code>console=ttyS0</code> 参数。</li>
-<li>按 <code>Ctrl-X</code> 使用修改后的菜单选项启动系统。</li>
+<li>获得 usb 设备的访问权限<ol>
+<li>把 usb 设备的所有者设置为当前用户</li>
+<li>用 root 权限运行 qemu</li>
 </ol>
-<p>例子：下面是修改 <code>debian-12.1.0-amd64-DVD-1.iso</code> 的 grub 菜单选项的效果。
-grub 的 <code>Install</code> 菜单选项内容修改前：
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>setparams &#39;Install&#39;
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    set background_color=black
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    linux    /install.amd/vmlinuz vga=788 --- quiet
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    initrd   /install.amd/initrd.gz
+</li>
+<li>设置合适的 qemu 参数并启动虚拟机</li>
+</ol>
+<p>对于步骤 1，下面选择第一种方法：找到 usb 设备的路径，并把文件的所有者设置为当前用户。</p>
+<h2 id="usb">获得 usb 设备的访问权限</h2>
+<h3 id="u">找到 U 盘的设备路径</h3>
+<p>在 Linux 上插入一个 U 盘时，一般容易看到一个新的块设备，比如 <code>/dev/sda</code> 或者 <code>/dev/sdb</code>。但是这并不是 usb 设备本身。</p>
+<p>通过 <code>lsusb</code> 命令，可以看到系统上的 usb 设备的信息。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ lsusb
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Bus 007 Device 003: ID 17ef:608c Lenovo USB Keyboard
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Bus 001 Device 004: ID 17ef:608d Lenovo Optical Mouse
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Bus 001 Device 005: ID 0930:6544 Toshiba Corp. TransMemory-Mini XXX 2.0 Stick
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+</span></code></pre></div></p>
+<ul>
+<li>由此可知，U 盘在 bus 001，device 005 的位置。</li>
+<li>可以在 <code>/dev/bus/usb/</code> 目录中找到这个设备，就是 <code>/dev/bus/usb/001/005</code>。通过 <code>udevadm info /dev/bus/usb/001/005</code> 可以确认这个路径指代的设备是这个 U 盘。</li>
+<li>在 ID <code>0930:6544</code> 中，<code>0930</code> 是 U 盘的 vendor id，<code>6544</code> 是 product id。</li>
+</ul>
+<h3 id="u_1">设置 U 盘设备的所有者</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo chown userAAA /dev/bus/usb/001/005
 </span></code></pre></div>
-删掉 <code>vga=788</code> 参数，添加 <code>console=ttyS0</code> 参数，如下：
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>setparams &#39;Install&#39;
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    set background_color=black
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    linux    /install.amd/vmlinuz console=ttyS0 --- quiet
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    initrd   /install.amd/initrd.gz
+<h2 id="qemu">设置 qemu 参数</h2>
+<p>为了直通前述 U 盘设备，在 qemu 命令中添加这些参数
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>-usb -device usb-host,vendorid=0x0930,productid=0x6544
+</span></code></pre></div></p>
+<ul>
+<li><code>-usb</code>：为虚拟机开启 USB 模拟功能。</li>
+<li><code>vendorid=0x0930,productid=0x6544</code>：上面找到了 U 盘的 vendor id 和 product id，依次填入。</li>
+</ul>
+<h2 id="_1">更多信息</h2>
+<h3 id="devsda-usb">探索块设备 <code>/dev/sda</code> 和 usb 设备的关系</h3>
+<p>在系统上插入一块 U 盘，容易看到类似 <code>/dev/sda</code> 的块设备。从块设备可以找出 usb 设备的信息。</p>
+<p>通过 <code>udevadm info /dev/sda</code> 可以看到设备的信息。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ udevadm info /dev/sda
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>P: /devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0/block/sda
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>M: sda
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>U: block
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>T: disk
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>D: b 8:0
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>N: sda
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>L: 0
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>S: disk/by-id/usb-TOSHIBA_TransMemory_8BCAA96A7EEBCE80907A4D62-0:0
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>S: disk/by-path/pci-0000:65:00.3-usb-0:1:1.0-scsi-0:0:0:0
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>S: disk/by-diskseq/21
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>Q: 21
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>E: DEVPATH=/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0/block/sda
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>E: DEVNAME=/dev/sda
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>E: DEVTYPE=disk
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>E: DISKSEQ=21
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>E: MAJOR=8
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>E: MINOR=0
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>E: SUBSYSTEM=block
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>......
+</span></code></pre></div>
+从设备的 path <code>/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0/block/sda</code> 可以看到，它与 <code>usb1/1-1</code> 有关系。</p>
+<p>通过 <code>udevadm info -a</code> 可以打印出一个设备所在的设备链条。其中就有 U 盘的 usb 设备信息。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ udevadm info -a /dev/sda | grep &#39;looking at&#39;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  looking at device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0/block/sda&#39;:
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0&#39;:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0&#39;:
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0&#39;:
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0&#39;:
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1&#39;:
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1&#39;:
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1/0000:65:00.3&#39;:
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  looking at parent device &#39;/devices/pci0000:00/0000:00:08.1&#39;:
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  looking at parent device &#39;/devices/pci0000:00&#39;:
 </span></code></pre></div></p>
 
 
@@ -688,7 +814,7 @@ grub 的 <code>Install</code> 菜单选项内容修改前：
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年7月26日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月8日</span>
   </span>
 
     
@@ -738,10 +864,10 @@ grub 的 <code>Install</code> 菜单选项内容修改前：
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>

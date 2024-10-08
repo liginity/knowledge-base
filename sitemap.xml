@@ -15,11 +15,18 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/"/>
     </url>
     <url>
-        <loc>Nonesoftware/qemu/</loc>
+        <loc>Nonesoftware/qemu/passthrough-usb/</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/passthrough-usb/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/passthrough-usb/"/>
+    </url>
+    <url>
+        <loc>Nonesoftware/qemu/tutorial-boot-iso-and-install/</loc>
+        <lastmod>2024-10-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/tutorial-boot-iso-and-install/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/tutorial-boot-iso-and-install/"/>
     </url>
     <url>
         <loc>Noneen/</loc>
@@ -36,10 +43,17 @@
         <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/"/>
     </url>
     <url>
-        <loc>Noneen/software/qemu/</loc>
+        <loc>Noneen/software/qemu/passthrough-usb/</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/passthrough-usb/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/passthrough-usb/"/>
+    </url>
+    <url>
+        <loc>Noneen/software/qemu/tutorial-boot-iso-and-install/</loc>
+        <lastmod>2024-10-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/software/qemu/tutorial-boot-iso-and-install/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonesoftware/qemu/tutorial-boot-iso-and-install/"/>
     </url>
 </urlset>
