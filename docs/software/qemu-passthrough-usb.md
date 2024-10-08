@@ -1,4 +1,4 @@
-## 给 qemu 虚拟机直通 usb 设备
+# 给 qemu 虚拟机直通 usb 设备
 
 给虚拟机直通宿主机的 usb 设备，可以让虚拟机直接访问 U 盘等物理设备。
 
@@ -11,9 +11,9 @@
 
 对于步骤 1，下面选择第一种方法：找到 usb 设备的路径，并把文件的所有者设置为当前用户。
 
-### 获得访问 usb 设备的权限
+## 获得访问 usb 设备的权限
 
-#### 找到 U 盘的设备路径
+### 找到 U 盘的设备路径
 
 在 Linux 上插入一个 U 盘时，一般容易看到一个新的块设备，比如 `/dev/sda` 或者 `/dev/sdb`。但是这并不是 usb 设备本身。
 
@@ -29,13 +29,13 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 可以在 `/dev/bus/usb/` 目录中找到这个设备，就是 `/dev/bus/usb/001/005`。通过 `udevadm info /dev/bus/usb/001/005` 可以确认这个路径指代的设备是这个 U 盘。
 另外，在 ID `0930:6544` 中，`0930` 是 U 盘的 vendor id，`6544` 是 product id。
 
-#### 设置 U 盘设备的所有者
+### 设置 U 盘设备的所有者
 
 ```
 sudo chown userAAA /dev/bus/usb/001/005
 ```
 
-### 设置 qemu 参数
+## 设置 qemu 参数
 
 为了直通前述 U 盘设备，在 qemu 命令中添加这些参数
 ```
@@ -44,7 +44,7 @@ sudo chown userAAA /dev/bus/usb/001/005
 - `-usb`：为虚拟机开启 USB 模拟功能。
 - `vendorid=0x0930,productid=0x6544`：上面找到了 U 盘的 vendor id 和 product id，依次填入。
 
-### 更多信息
+## 更多信息
 
 这里探索 `/dev/sda` 和 usb 设备的关系。
 通过 `udevadm info /dev/sda` 可以看到设备的信息。这里的 `/dev/sda` 是一个 U 盘。
