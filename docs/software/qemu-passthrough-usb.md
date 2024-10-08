@@ -48,8 +48,11 @@ sudo chown userAAA /dev/bus/usb/001/005
 
 ## 更多信息
 
-这里探索 `/dev/sda` 和 usb 设备的关系。
-通过 `udevadm info /dev/sda` 可以看到设备的信息。这里的 `/dev/sda` 是一个 U 盘。
+### 探索块设备 `/dev/sda` 和 usb 设备的关系
+
+在系统上插入一块 U 盘，容易看到类似 `/dev/sda` 的块设备。从块设备可以找出 usb 设备的信息。
+
+通过 `udevadm info /dev/sda` 可以看到设备的信息。
 ```
 $ udevadm info /dev/sda
 P: /devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0/block/sda
@@ -73,3 +76,18 @@ E: SUBSYSTEM=block
 ......
 ```
 从设备的 path `/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0/block/sda` 可以看到，它与 `usb1/1-1` 有关系。
+
+通过 `udevadm info -a` 可以打印出一个设备所在的设备链条。其中就有 U 盘的 usb 设备信息。
+```
+$ udevadm info -a /dev/sda | grep 'looking at'
+  looking at device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0/block/sda':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0/0:0:0:0':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0/target0:0:0':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0/host0':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1/1-1:1.0':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1/1-1':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3/usb1':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1/0000:65:00.3':
+  looking at parent device '/devices/pci0000:00/0000:00:08.1':
+  looking at parent device '/devices/pci0000:00':
+```
